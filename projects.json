@@ -1,0 +1,13 @@
+{
+    "default": {
+        "project": "",
+        "env": ""
+    },
+    "example": {
+        "example-env": {
+            "cluster": "example-cluster",
+            "profile": "example-profile",
+            "region": "example-region"
+        }
+    }
+}

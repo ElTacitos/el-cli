@@ -1,0 +1,3 @@
+{
+  "aws_cluster_tunnel": "aws ssm start-session --profile {profile} --region {region} --target $(aws ec2 describe-instances --region eu-west-1 --filters 'Name=tag:Name,Values=bastion-ssm-*' 'Name=instance-state-name,Values=running' --query 'Reservations[*].Instances[*].[InstanceId]' --output text --profile {profile})  --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters '{{\"host\":[\"{cluster}\"],\"portNumber\":[\"443\"], \"localPortNumber\":[\"10443\"]}}'"
+}
